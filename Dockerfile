@@ -12,5 +12,12 @@ RUN npm install --global yarn
 
 RUN gem install rails
 
+WORKDIR /app
+
+COPY Gemfile
+COPY Gemfile.lock 
+
+RUN bundle install 
+
 RUN useradd -c "dev user" -m -u 1000 -s /bin/bash dev
 
