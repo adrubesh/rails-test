@@ -19,5 +19,7 @@ COPY Gemfile.lock  .
 
 RUN bundle install 
 
+COPY . .
+
 RUN useradd -c "dev user" -m -u 1000 -s /bin/bash dev
 
