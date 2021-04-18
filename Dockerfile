@@ -14,8 +14,8 @@ RUN gem install rails
 
 WORKDIR /app
 
-COPY Gemfile
-COPY Gemfile.lock 
+COPY Gemfile .
+COPY Gemfile.lock  .
 
 RUN bundle install 
 
