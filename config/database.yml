@@ -13,9 +13,11 @@ development:
   pool: 5
   timeout: 5000
   encoding: unicode
+  adapater: postgresql
+  host: <%= ENV.fetch("RAILS_DB_HOST") { "localhost" }
   username: <%= ENV.fetch("RAILS_DB_USER") { "admin" } %>
   password: <%= ENV.fetch("RAILS_DB_PASSWORD") { "notset" } %>
-  database: <%= ENV.fetch("RAILS_DB") { "localhost" } %>
+  database: <%= ENV.fetch("RAILS_DB") { "rails" } %>
 
 
 # Warning: The database defined as "test" will be erased and
