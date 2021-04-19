@@ -14,7 +14,7 @@ development:
   timeout: 5000
   encoding: unicode
   adapater: postgresql
-  host: <%= ENV.fetch("RAILS_DB_HOST") { "localhost" }
+  host: <%= ENV.fetch("RAILS_DB_HOST") { "localhost" } %>
   username: <%= ENV.fetch("RAILS_DB_USER") { "admin" } %>
   password: <%= ENV.fetch("RAILS_DB_PASSWORD") { "notset" } %>
   database: <%= ENV.fetch("RAILS_DB") { "rails" } %>
