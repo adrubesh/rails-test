@@ -18,8 +18,12 @@ COPY Gemfile .
 COPY Gemfile.lock  .
 
 RUN bundle install 
+RUN rails assets:precompile
 
 COPY . .
 
-RUN useradd -c "dev user" -m -u 1000 -s /bin/bash dev
+CMD ["rails", "server", "-b", "0.0.0.0"]
+
+
+
 
